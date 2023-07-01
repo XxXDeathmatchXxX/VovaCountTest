@@ -6,22 +6,6 @@ import math
 import cmath
 
 
-def main():
-    boy = name1()
-    girl = name2()
-    apples = number1()
-    pineapples = number2()
-
-    print("Наши школьники ", boy,  "и ", girl,  "имеют ", apples, "и ", pineapples,
-      "яблок и груш, соответственно,\nим необходимо отнести их домой, при том, что в сумку вмещается" f' {bag} ' 
-      "яблок, либо груш \n"
-      "Сколько сумок необъходимо каждому из школьников"
-      "  \n\n")
-
-
-
-    print('Ответ: ', math.ceil(apples/bag), "для первого и ", math.ceil(pineapples/bag), " для второго школьника.")
-
 
 
 
@@ -35,11 +19,6 @@ def random_logarythm():
     return task, answer
 
 
-
-
-primer, otvet = random_logarythm()
-print(primer)
-print(otvet)
 
 
 
@@ -57,13 +36,6 @@ def random_logarythm_stepen():
         a = n ** math.log(degree_of_logarythm, base_of_loogarythm)
         task = f'Вычислите: \{n}**(log' + str(base_of_loogarythm) + '}{' + str(degree_of_logarythm) + '}\)'
     return task, a
-
-
-# Пример вывода
-n, my = random_logarythm_stepen()
-print(n)
-print(my)
-
 
 
 
@@ -86,9 +58,7 @@ def random_logarythm_with_fractions():
     return a, task
 
 
-a, task = random_logarythm_with_fractions()
-print(task)
-print("Ответ:", int(a))
+
 
 
 
@@ -110,9 +80,7 @@ def sum_logarytms():
 
     return a, task
 
-a,b =sum_logarytms()
-print(b)
-print("Ответ: ", int(a))
+
 
 
 def decrement_logarytms():
@@ -137,13 +105,7 @@ def decrement_logarytms():
     return minus, task_decrement
 
 
-minus, task_decrement = decrement_logarytms()
 
-print(task_decrement)
-print("Ответ: ", int(minus))
-
-l = 3**math.log(8, 2)
-print(l)
 
 
 
