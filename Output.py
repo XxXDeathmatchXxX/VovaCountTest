@@ -36,9 +36,13 @@ def random_logarythm():
 
 
 
+
 primer, otvet = random_logarythm()
 print(primer)
 print(otvet)
+
+
+
 
 def random_logarythm_stepen():
 
@@ -54,9 +58,19 @@ def random_logarythm_stepen():
         task = f'Вычислите: \{n}**(log' + str(base_of_loogarythm) + '}{' + str(degree_of_logarythm) + '}\)'
     return task, a
 
+
+# Пример вывода
 n, my = random_logarythm_stepen()
 print(n)
 print(my)
+
+
+
+
+
+
+
+
 
 def random_logarythm_with_fractions():
     list = [2, 3, 4, 8, 9, 16, 27, 81]
