@@ -22,7 +22,7 @@ def random_logarythm():
 
 
 
-
+#Задача 14526
 def random_logarythm_stepen():
 
     base_of_loogarythm = random.randint(2, 15)
@@ -81,7 +81,7 @@ def sum_logarytms():
     return a, task
 
 
-
+# Задачи 14510, 14515
 def decrement_logarytms():
     base_of_loogarythm1 = random.randint(2, 10)
     answer_of_loogarythm1 = random.randint(0, 4)
