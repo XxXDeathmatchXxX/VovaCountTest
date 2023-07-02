@@ -104,9 +104,7 @@ def decrement_logarytms():
     return minus, task_decrement
 
 
-a, b = decrement_logarytms()
-print(a)
-print(b)
+
 
 
 
