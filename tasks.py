@@ -2,7 +2,7 @@ import random
 import fractions
 from Settings import bag, name1, name2, number1, number2
 import math
-
+import re
 import cmath
 
 
@@ -50,12 +50,13 @@ def random_logarythm_with_fractions():
     if even_or_odd % 2 == 0:
         fraction = fractions.Fraction(1, even_or_odd)
         a = int(math.log(fraction, 2))
-        task = f'Вычислите: \(log_'"{" + str(fraction) + '}{' + str(2) + '}\)'
+        task = f'Вычислите: \(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(2) + '}\)'
     else:
         fraction = fractions.Fraction(1, even_or_odd)
         a = int(math.log(fraction, 3))
-        task = f'Вычислите: \(log_'"{" + str(fraction) + '}{' + str(3) + '}\)'
+        task = f'Вычислите: \(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(3) + '}\)'
     return a, task
+
 
 
 
