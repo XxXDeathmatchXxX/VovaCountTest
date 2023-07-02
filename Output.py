@@ -2,7 +2,7 @@ import random
 import fractions
 from Settings import bag, name1, name2, number1, number2
 import math
-from tasks import random_log, random_log_fraction
+
 import cmath
 
 

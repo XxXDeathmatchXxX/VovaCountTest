@@ -30,10 +30,10 @@ def random_logarythm_stepen():
     degree_of_logarythm = base_of_loogarythm**answer
     n = random.randint(1, 5)
     if n < 2:
-        a = n**math.log(degree_of_logarythm, base_of_loogarythm)
+        a = int(n**math.log(degree_of_logarythm, base_of_loogarythm))
         task = f'Вычислите: \(log' + str(base_of_loogarythm)+'}{'+str(degree_of_logarythm)+'}\)'
     else:
-        a = n ** math.log(degree_of_logarythm, base_of_loogarythm)
+        a = int(n ** math.log(degree_of_logarythm, base_of_loogarythm))
         task = f'Вычислите: \{n}**(log' + str(base_of_loogarythm) + '}{' + str(degree_of_logarythm) + '}\)'
     return task, a
 
@@ -49,11 +49,11 @@ def random_logarythm_with_fractions():
     even_or_odd = random.choice(list)
     if even_or_odd % 2 == 0:
         fraction = fractions.Fraction(1, even_or_odd)
-        a = math.log(fraction, 2)
+        a = int(math.log(fraction, 2))
         task = f'Вычислите: \(log'"{" + str(fraction) + '}{' + str(2) + '}\)'
     else:
         fraction = fractions.Fraction(1, even_or_odd)
-        a = math.log(fraction, 3)
+        a = int(math.log(fraction, 3))
         task = f'Вычислите: \(log'"{" + str(fraction) + '}{' + str(3) + '}\)'
     return a, task
 
@@ -70,7 +70,7 @@ def sum_logarytms():
     base_of_loogarythm2 = random.randint(2, 10)
     answer_of_loogarythm2 = random.randint(0, 4)
     degree_of_logarythm2 = base_of_loogarythm2**answer_of_loogarythm2
-    a = math.log(degree_of_logarythm2, base_of_loogarythm2) + n*math.log(degree_of_logarythm1, base_of_loogarythm1)
+    a = int(math.log(degree_of_logarythm2, base_of_loogarythm2) + n*math.log(degree_of_logarythm1, base_of_loogarythm1))
     if n > 1:
         task = f'Вычислите сумму логарифмов:\(log'"{" + str(base_of_loogarythm1) + '}{' + str(degree_of_logarythm1) +\
            '}\)' "+" f'{n}*\(log' + str(base_of_loogarythm2) + '}{' + str(degree_of_logarythm2) + '}\)'
@@ -92,7 +92,7 @@ def decrement_logarytms():
     base_of_loogarythm2 = random.randint(2, 10)
     answer_of_loogarythm2 = random.randint(0, 4)
     degree_of_logarythm2 = base_of_loogarythm2**answer_of_loogarythm2
-    minus = math.log(degree_of_logarythm2, base_of_loogarythm2) - n*math.log(degree_of_logarythm1, base_of_loogarythm1)
+    minus = int(math.log(degree_of_logarythm2, base_of_loogarythm2) - n*math.log(degree_of_logarythm1, base_of_loogarythm1))
     if n > 1:
         task_decrement = f'Вычислите разницу логарифмов:\(log'"{" + str(base_of_loogarythm2) +\
                          '}{' + str(degree_of_logarythm2) + '}\)' "-" f'{n}*\(log' + str(base_of_loogarythm1) + \
@@ -103,7 +103,6 @@ def decrement_logarytms():
             degree_of_logarythm1) + '}\)'
 
     return minus, task_decrement
-
 
 
 
