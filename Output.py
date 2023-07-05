@@ -23,6 +23,15 @@ def main():
     print('Ответ: ', math.ceil(apples/bag), "для первого и ", math.ceil(pineapples/bag), " для второго школьника.")
 
 
+import random
+import fractions
+from Settings import bag, name1, name2, number1, number2
+import math
+import re
+import cmath
+
+
+
 
 # Задача № 10991
 def random_logarythm():
@@ -41,18 +50,34 @@ def random_logarythm():
 #Задача 14526
 def random_logarythm_stepen():
 
-    base_of_loogarythm = random.randint(2, 6)
+    base_of_loogarythm = random.randint(2, 15)
     answer = random.randint(0, 4)
     degree_of_logarythm = base_of_loogarythm**answer
+    n = random.randint(1, 5)
+    if n < 2:
+        a = int(n**math.log(degree_of_logarythm, base_of_loogarythm))
+        task = f'Вычислите: \(log_'"{" + str(base_of_loogarythm)+'}{'+str(degree_of_logarythm)+'}\)'
+    else:
+        a = int(n ** math.log(degree_of_logarythm, base_of_loogarythm))
+        task = f'Вычислите: \({n}^'"{"'log_'"{" + str(base_of_loogarythm) + '}{' + str(degree_of_logarythm) + '}}\)'
+    return task, a
+
+
+
+#Задачи 14526, 14567, 10991
+def random_logarythm_stepen_umnojenie():
+    base_of_loogarythm = random.randint(2, 6)
+    answer = random.randint(0, 4)
+    degree_of_logarythm = base_of_loogarythm ** answer
     n = random.randint(1, 3)
     m = random.randint(1, 3)
     if n < 2 and m < 2:
-        a = int(n**(m*math.log(degree_of_logarythm, base_of_loogarythm)))
-        task = f'Вычислите: \(log_'"{" + str(base_of_loogarythm)+'}{'+str(degree_of_logarythm)+'}\)'
+        a = int(n ** (m * math.log(degree_of_logarythm, base_of_loogarythm)))
+        task = f'Вычислите: \(log_'"{" + str(base_of_loogarythm) + '}{' + str(degree_of_logarythm) + '}\)'
     elif n >= 2 and m >= 2:
-        a = int(n**(m*math.log(degree_of_logarythm, base_of_loogarythm)))
+        a = int(n ** (m * math.log(degree_of_logarythm, base_of_loogarythm)))
         task = f'Вычислите:' f'\({n}^'"{"f'{m}*log_'"{" + str(base_of_loogarythm) + '}{' \
-                                           + str(degree_of_logarythm) + '}}\)'
+               + str(degree_of_logarythm) + '}}\)'
     elif n < 2 and m >= 2:
         a = int(n ** (m * math.log(degree_of_logarythm, base_of_loogarythm)))
         task = f'Вычислите:' f'\({n}^'"{"f'{m}*log_'"{" + str(base_of_loogarythm) + '}{' \
@@ -64,12 +89,6 @@ def random_logarythm_stepen():
 
     return task, a
 
-
-
-task, a = random_logarythm_stepen()
-
-print(task)
-print("Ответ: ", int(a))
 
 
 #Задача № 12242
@@ -133,6 +152,13 @@ def decrement_logarytms():
             degree_of_logarythm1) + '}\)'
 
     return minus, task_decrement
+
+
+
+
+
+
+
 
 
 
