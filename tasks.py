@@ -136,6 +136,34 @@ def sum_logarytms_new():
 
 
 
+# Звдача № 14579
+
+def sum_logarytms_stepen():
+    base_of_loogarythm1 = random.randint(2, 10)
+    answer_of_loogarythm1 = random.randint(0, 4)
+    degree_of_logarythm1 = base_of_loogarythm1**answer_of_loogarythm1
+    n = random.randint(1, 3)
+    m = random.randint(1, 3)
+    k = random.randint(1, 3)
+    base_of_loogarythm2 = random.randint(2, 10)
+    answer_of_loogarythm2 = random.randint(0, 4)
+    degree_of_logarythm2 = base_of_loogarythm2**answer_of_loogarythm2
+    a = int(n**(k*math.log(degree_of_logarythm2, base_of_loogarythm2) + m*math.log(degree_of_logarythm1, base_of_loogarythm1)))
+    if m >= 2 and k < 2:
+        task = f'Вычислите:' f'\{n}^'"{"f'(log_'"{" + str(base_of_loogarythm1) + '}{' + str(degree_of_logarythm1) +\
+           '}\)' "+" f'{m}*\(log_'"{" + str(base_of_loogarythm2) + '}{' + str(degree_of_logarythm2) + '})}'
+    elif m < 2 and k < 2:
+        task = f'Вычислите:' f'\{n}^'"{"f'(log_'"{" + str(base_of_loogarythm1) + '}{' + str(degree_of_logarythm1) + \
+               '}\)' "+" f'\(log_'"{" + str(base_of_loogarythm2) + '}{' + str(degree_of_logarythm2) + '})}'
+    elif m >= 2 and k >= 2:
+        task = f'Вычислите:' f'\({n}^'"{"f'{k}*(log_'"{" + str(base_of_loogarythm1) + '}{' + str(degree_of_logarythm1) + \
+               '}\)' "+" f'{m}*\(log_'"{" + str(base_of_loogarythm2) + '}{' + str(degree_of_logarythm2) + '})}'
+    elif m < 2 and k >= 2:
+        task = f'Вычислите:' f'\({n}^'"{"f'{k}*(log_'"{" + str(base_of_loogarythm1) + '}{' + str(degree_of_logarythm1) + \
+               '}\)' "+" f'\(log_'"{" + str(base_of_loogarythm2) + '}{' + str(degree_of_logarythm2) + '})}'
+
+
+    return a, task
 
 
 
@@ -197,4 +225,29 @@ def decrement_logarytms_new():
 
 
 
+# Задача № 14578
+def decrement_logarytms_stepen():
+    base_of_loogarythm1 = random.randint(2, 10)
+    answer_of_loogarythm1 = random.randint(0, 4)
+    degree_of_logarythm1 = base_of_loogarythm1**answer_of_loogarythm1
+    n = random.randint(1, 4)
+    m = random.randint(1, 4)
+    k = random.randint(1, 4)
+    base_of_loogarythm2 = random.randint(2, 10)
+    answer_of_loogarythm2 = random.randint(0, 4)
+    degree_of_logarythm2 = base_of_loogarythm2**answer_of_loogarythm2
+    a = int(n**(k*math.log(degree_of_logarythm2, base_of_loogarythm2) - m*math.log(degree_of_logarythm1, base_of_loogarythm1)))
+    if m >= 2 and k < 2:
+        task = f'Вычислите:' f'\{n}^'"{"f'(log_'"{" + str(base_of_loogarythm1) + '}{' + str(degree_of_logarythm1) +\
+           '}\)' "-" f'{m}*\(log_'"{" + str(base_of_loogarythm2) + '}{' + str(degree_of_logarythm2) + '})}'
+    elif m < 2 and k < 2:
+        task = f'Вычислите:' f'\{n}^'"{"f'(log_'"{" + str(base_of_loogarythm1) + '}{' + str(degree_of_logarythm1) + \
+               '}\)' "-" f'\(log_'"{" + str(base_of_loogarythm2) + '}{' + str(degree_of_logarythm2) + '})}'
+    elif m >= 2 and k >= 2:
+        task = f'Вычислите:' f'\({n}^'"{"f'{k}*(log_'"{" + str(base_of_loogarythm1) + '}{' + str(degree_of_logarythm1) + \
+               '}\)' "-" f'{m}*\(log_'"{" + str(base_of_loogarythm2) + '}{' + str(degree_of_logarythm2) + '})}'
+    elif m < 2 and k >= 2:
+        task = f'Вычислите:' f'\({n}^'"{"f'{k}*(log_'"{" + str(base_of_loogarythm1) + '}{' + str(degree_of_logarythm1) + \
+               '}\)' "-" f'\(log_'"{" + str(base_of_loogarythm2) + '}{' + str(degree_of_logarythm2) + '})}'
 
+    return a, task
