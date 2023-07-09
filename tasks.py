@@ -87,19 +87,21 @@ def random_logarythm_with_fractions():
 def random_logarythm_with_fractions_with_stepen():
     list = [2, 3, 4, 8, 9, 16, 27, 81]
     even_or_odd = random.choice(list)
-    n = random.randint(1, 5)
+    n = random.randint(1, 3)
     if even_or_odd % 2 == 0:
         fraction = fractions.Fraction(1, even_or_odd)
-        a = format(float(n**(math.log(fraction, 2))), '.5')
-        task = f'Вычислите: \{n}^(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(2) + '}\)'
+        a = float(n**(math.log(fraction, 2)))
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(2) + '}\)'
     else:
         fraction = fractions.Fraction(1, even_or_odd)
-        a = format(float(n**(math.log(fraction, 3))), '.5')
-        task = f'Вычислите: \{n}^(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(3) + '}\)'
+        a = float(n**(math.log(fraction, 3)))
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(3) + '}\)'
     return a, task
 
+a, task = random_logarythm_with_fractions_with_stepen()
 
-
+print(task)
+print('Ответ:', a)
 
 
 

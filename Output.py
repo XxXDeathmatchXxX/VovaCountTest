@@ -178,11 +178,11 @@ def random_logarythm_with_fractions_with_stepen():
     if even_or_odd % 2 == 0:
         fraction = fractions.Fraction(1, even_or_odd)
         a = float(n**(math.log(fraction, 2)))
-        task = f'Вычислите: \{n}^(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(2) + '}\)'
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(2) + '}\)'
     else:
         fraction = fractions.Fraction(1, even_or_odd)
         a = float(n**(math.log(fraction, 3)))
-        task = f'Вычислите: \{n}^(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(3) + '}\)'
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(3) + '}\)'
     return a, task
 
 
