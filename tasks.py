@@ -105,18 +105,18 @@ def random_logarythm_stepen_minus():
     n = random.randint(1, 3)
     m = random.randint(1, 3)
     if n < 2 and m < 2:
-        a = int(n ** (m + math.log(degree_of_logarythm, base_of_loogarythm)))
+        a = format(n ** (m - math.log(degree_of_logarythm, base_of_loogarythm)), '.4')
         task = f'Вычислите: \(log_'"{" + str(base_of_loogarythm) + '}{' + str(degree_of_logarythm) + '}\)'
     elif n >= 2 and m >= 2:
-        a = int(n ** (m + math.log(degree_of_logarythm, base_of_loogarythm)))
+        a = format(n ** (m - math.log(degree_of_logarythm, base_of_loogarythm)), '.4')
         task = f'Вычислите:' f'\({n}^'"{"f'{m}-log_'"{" + str(base_of_loogarythm) + '}{' \
                + str(degree_of_logarythm) + '}}\)'
     elif n < 2 and m >= 2:
-        a = int(n ** (m + math.log(degree_of_logarythm, base_of_loogarythm)))
+        a = format(n ** (m - math.log(degree_of_logarythm, base_of_loogarythm)), '.4')
         task = f'Вычислите:' f'\({n}^'"{"f'{m}-log_'"{" + str(base_of_loogarythm) + '}{' \
                + str(degree_of_logarythm) + '}}\)'
     elif n >= 2 and m < 2:
-        a = int(n ** (m + math.log(degree_of_logarythm, base_of_loogarythm)))
+        a = format(n ** (m - math.log(degree_of_logarythm, base_of_loogarythm)), '.4')
         task = f'Вычислите:' f'\({n}^'"{"f'log_'"{" + str(base_of_loogarythm) + '}{' \
                + str(degree_of_logarythm) + '}}\)'
 
