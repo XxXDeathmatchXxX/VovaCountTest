@@ -3,8 +3,6 @@ import fractions
 from Settings import bag, name1, name2, number1, number2
 import math
 
-import cmath
-
 
 def main():
     boy = name1()
@@ -23,12 +21,8 @@ def main():
     print('Ответ: ', math.ceil(apples/bag), "для первого и ", math.ceil(pineapples/bag), " для второго школьника.")
 
 
-import random
-import fractions
-from Settings import bag, name1, name2, number1, number2
-import math
-import re
-import cmath
+
+
 
 
 
@@ -41,7 +35,7 @@ def random_logarythm():
     degree_of_logarythm = base_of_loogarythm**answer
     a = math.log(degree_of_logarythm, base_of_loogarythm)
     task = f'Вычислите: \(log_'"{" + str(base_of_loogarythm)+'}{'+str(degree_of_logarythm)+'}\)'
-    return task, answer
+    return answer, task
 
 
 
@@ -60,7 +54,7 @@ def random_logarythm_stepen():
     else:
         a = int(n ** math.log(degree_of_logarythm, base_of_loogarythm))
         task = f'Вычислите: \({n}^'"{"'log_'"{" + str(base_of_loogarythm) + '}{' + str(degree_of_logarythm) + '}}\)'
-    return task, a
+    return a, task
 
 
 
@@ -87,7 +81,7 @@ def random_logarythm_stepen_umnojenie():
         task = f'Вычислите:' f'\({n}^'"{"f'log_'"{" + str(base_of_loogarythm) + '}{' \
                + str(degree_of_logarythm) + '}}\)'
 
-    return task, a
+    return a, task
 
 
 
@@ -116,7 +110,7 @@ def random_logarythm_stepen_slojenie():
         task = f'Вычислите:' f'\({n}^'"{"f'log_'"{" + str(base_of_loogarythm) + '}{' \
                + str(degree_of_logarythm) + '}}\)'
 
-    return task, a
+    return a, task
 
 
 
@@ -144,7 +138,7 @@ def random_logarythm_stepen_minus():
         task = f'Вычислите:' f'\({n}^'"{"f'log_'"{" + str(base_of_loogarythm) + '}{' \
                + str(degree_of_logarythm) + '}}\)'
 
-    return task, a
+    return a, task
 
 
 
@@ -188,10 +182,76 @@ def random_logarythm_with_fractions_with_stepen():
 
 
 
-a, task = random_logarythm_with_fractions_with_stepen()
 
-print(task)
-print('Ответ:', format(a, '.4'))
+def random_logarythm_with_fractions_with_stepen_decrement_figure():
+    list = [2, 3, 4, 8, 9, 16, 27, 81]
+    even_or_odd = random.choice(list)
+    n = random.randint(1, 3)
+    p = random.randint(0, 4)
+    if even_or_odd % 2 == 0 and p > 0:
+        fraction = fractions.Fraction(1, even_or_odd)
+        a = format(float(n**(math.log(fraction, 2)) - p), '.5')
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(2) +"})}{-" f"{p}"'}'
+    elif even_or_odd % 2 != 0 and p > 0:
+        fraction = fractions.Fraction(1, even_or_odd)
+        a = format(float(n**(math.log(fraction, 3)) - p), '.5')
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(3) + "})}{-" f"{p}"'}'
+    elif even_or_odd % 2 == 0 and p == 0:
+        fraction = fractions.Fraction(1, even_or_odd)
+        a = format(float(n ** (math.log(fraction, 2))), '.5')
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(
+            2) + '}\)'
+    elif even_or_odd % 2 != 0 and p == 0:
+        fraction = fractions.Fraction(1, even_or_odd)
+        a = format(float(n ** (math.log(fraction, 3))), '.5')
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(
+            3) + '}\)'
+    return a, task
+
+
+
+
+def random_logarythm_with_fractions_with_stepen_increment_figure():
+    list = [2, 3, 4, 8, 9, 16, 27, 81]
+    even_or_odd = random.choice(list)
+    n = random.randint(1, 3)
+    p = random.randint(0, 4)
+    if even_or_odd % 2 == 0 and p > 0:
+        fraction = fractions.Fraction(1, even_or_odd)
+        a = format(float(n**(math.log(fraction, 2)) + p), '.5')
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(2) +"})}{+" f"{p}"'}'
+    elif even_or_odd % 2 != 0 and p > 0:
+        fraction = fractions.Fraction(1, even_or_odd)
+        a = format(float(n**(math.log(fraction, 3)) + p), '.5')
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(3) + "})}{+" f"{p}"'}'
+    elif even_or_odd % 2 == 0 and p == 0:
+        fraction = fractions.Fraction(1, even_or_odd)
+        a = format(float(n ** (math.log(fraction, 2))), '.5')
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(
+            2) + '}\)'
+    elif even_or_odd % 2 != 0 and p == 0:
+        fraction = fractions.Fraction(1, even_or_odd)
+        a = format(float(n ** (math.log(fraction, 3))), '.5')
+        task = f'Вычислите: \{n}^'r'{(log_' r"{\frac" + '{' + str(1) + '}' + '{' + str(even_or_odd) + '}}{' + str(
+            3) + '}\)'
+    return a, task
+
+
+
+
+
+
+
+
+
+
+
+
+
+# a, task = random_logarythm_with_fractions_with_stepen_increment_figure()
+#
+# print(task)
+# print('Ответ:', a)
 
 # № Задача 14069
 
@@ -270,17 +330,17 @@ def decrement_logarytms():
     base_of_loogarythm2 = random.randint(2, 10)
     answer_of_loogarythm2 = random.randint(0, 4)
     degree_of_logarythm2 = base_of_loogarythm2**answer_of_loogarythm2
-    minus = int(math.log(degree_of_logarythm2, base_of_loogarythm2) - n*math.log(degree_of_logarythm1, base_of_loogarythm1))
+    a = int(math.log(degree_of_logarythm2, base_of_loogarythm2) - n*math.log(degree_of_logarythm1, base_of_loogarythm1))
     if n > 1:
-        task_decrement = f'Вычислите разницу логарифмов:\(log_'"{" + str(base_of_loogarythm2) +\
+        task = f'Вычислите разницу логарифмов:\(log_'"{" + str(base_of_loogarythm2) +\
                          '}{' + str(degree_of_logarythm2) + '}\)' "-" f'{n}*\(log_'"{" + str(base_of_loogarythm1) + \
                          '}{' + str(degree_of_logarythm1) + '}\)'
     else:
-        task_decrement = f'Вычислите разницу логарифмов:\(log_'"{" + str(base_of_loogarythm2) + '}{' + str(
+        task = f'Вычислите разницу логарифмов:\(log_'"{" + str(base_of_loogarythm2) + '}{' + str(
             degree_of_logarythm2) + '}\)' "-" f'\(log_'"{" + str(base_of_loogarythm1) + '}{' + str(
             degree_of_logarythm1) + '}\)'
 
-    return minus, task_decrement
+    return a, task
 
 
 def decrement_logarytms_new():
@@ -344,6 +404,12 @@ def decrement_logarytms_stepen():
 
 
 
+# def logarythm_of_logarythm():
+#     a = math.log(9, math.log(8,2))
+#     return a
+#
+# a = logarythm_of_logarythm()
+# print(a)
 
 
 
@@ -354,6 +420,16 @@ def decrement_logarytms_stepen():
 
 
 
+
+
+
+
+stack_of_functions = [random_logarythm_with_fractions_with_stepen_increment_figure(),
+                      random_logarythm_with_fractions_with_stepen_decrement_figure(),
+                      random_logarythm(), random_logarythm_with_fractions(), random_logarythm_with_fractions_with_stepen(),
+                      random_logarythm_stepen_slojenie(), random_logarythm_stepen(), random_logarythm_stepen_umnojenie(),
+                      random_logarythm_stepen_minus(), sum_logarytms_stepen(), sum_logarytms(), decrement_logarytms_stepen(),
+                      decrement_logarytms(), decrement_logarytms_new()]
 
 
 
