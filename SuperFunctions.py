@@ -1,6 +1,6 @@
 import random
 from Output import stack_of_functions
-from tasks import stack_of_functions
+
 
 
 def SuperFunction():
