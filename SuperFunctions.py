@@ -7,7 +7,7 @@ def SuperFunction():
     a = random.choice(stack_of_functions)
     return a
 
-a, b = SuperFunction()
-
-print(b)
-print("Ответ: ", a)
+# a, b = SuperFunction()
+#
+# print(b)
+# print("Ответ: ", a)

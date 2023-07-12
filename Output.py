@@ -2,6 +2,7 @@ import random
 import fractions
 from Settings import bag, name1, name2, number1, number2
 import math
+from decimal import Decimal
 
 
 def main():
@@ -123,24 +124,29 @@ def random_logarythm_stepen_minus():
     n = random.randint(1, 3)
     m = random.randint(1, 3)
     if n < 2 and m < 2:
-        a = int(n ** (m + math.log(degree_of_logarythm, base_of_loogarythm)))
+        a = format(n ** (m - math.log(degree_of_logarythm, base_of_loogarythm)), '.4')
         task = f'Вычислите: \(log_'"{" + str(base_of_loogarythm) + '}{' + str(degree_of_logarythm) + '}\)'
     elif n >= 2 and m >= 2:
-        a = int(n ** (m + math.log(degree_of_logarythm, base_of_loogarythm)))
+        a = format(n ** (m - math.log(degree_of_logarythm, base_of_loogarythm)), '.4')
         task = f'Вычислите:' f'\({n}^'"{"f'{m}-log_'"{" + str(base_of_loogarythm) + '}{' \
                + str(degree_of_logarythm) + '}}\)'
     elif n < 2 and m >= 2:
-        a = int(n ** (m + math.log(degree_of_logarythm, base_of_loogarythm)))
+        a = format(n ** (m - math.log(degree_of_logarythm, base_of_loogarythm)), '.4')
         task = f'Вычислите:' f'\({n}^'"{"f'{m}-log_'"{" + str(base_of_loogarythm) + '}{' \
                + str(degree_of_logarythm) + '}}\)'
     elif n >= 2 and m < 2:
-        a = int(n ** (m + math.log(degree_of_logarythm, base_of_loogarythm)))
+        a = format(n ** (m - math.log(degree_of_logarythm, base_of_loogarythm)), '.4')
         task = f'Вычислите:' f'\({n}^'"{"f'log_'"{" + str(base_of_loogarythm) + '}{' \
                + str(degree_of_logarythm) + '}}\)'
 
     return a, task
 
 
+
+a, task = random_logarythm_stepen_minus()
+
+print(task)
+print('Ответ:', a)
 
 
 
@@ -248,10 +254,7 @@ def random_logarythm_with_fractions_with_stepen_increment_figure():
 
 
 
-# a, task = random_logarythm_with_fractions_with_stepen_increment_figure()
-#
-# print(task)
-# print('Ответ:', a)
+
 
 # № Задача 14069
 
