@@ -1,5 +1,5 @@
 import random
-from Output import stack_of_functions
+from tasks_generator.Output import stack_of_functions
 
 
 
