@@ -3,7 +3,7 @@ from tasks_generator.Output import stack_of_functions
 
 
 
-def SuperFunction():
+def super_function():
     a = random.choice(stack_of_functions)
     return a
 
